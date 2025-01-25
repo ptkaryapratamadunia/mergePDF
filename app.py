@@ -4,11 +4,19 @@ from PyPDF2 import PdfMerger
 import streamlit as st
 from PIL import Image
 
-logo = Image.open("logokpd.png")
-st.image(logo, width=36)
-st.write("KPD", align="right")
-st.title("Tools Penggabung File PDF")
-st.write("Tools untuk menggabungkan beberapa file PDF menjadi satu file PDF.") #e-WeYe
+
+kanan, kiri = st.columns([4, 1])
+
+with kanan:
+
+    logo = Image.open("logokpd.png")
+    st.image(logo, width=36)
+    st.write("KPD", align="right")
+
+with kiri:
+    st.title("Tools Penggabung File PDF")
+    st.write("Tools untuk menggabungkan beberapa file PDF menjadi satu file PDF.") #e-WeYe
+
 
 uploaded_files = st.file_uploader("Unggah file PDF", accept_multiple_files=True)
 
