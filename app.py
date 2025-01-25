@@ -10,10 +10,11 @@ kanan, kiri = st.columns([4, 1])
 with kiri:
 
     logo = Image.open("logokpd.png")
-    st.image(logo, width=36, caption="KPD")
+    st.image(logo, width=36)
     # st.write("KPD", align="right")
 
 with kanan:
+
     st.title("Tools Penggabung File PDF")
     st.write("Tools untuk menggabungkan beberapa file PDF menjadi satu file PDF.") #e-WeYe
 
