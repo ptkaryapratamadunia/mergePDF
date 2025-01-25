@@ -16,7 +16,8 @@ with kiri:
 with kanan:
 
     st.title("Tools Penggabung File PDF")
-    st.write("Tools untuk menggabungkan beberapa file PDF menjadi satu file PDF.") #e-WeYe
+
+st.write("Tools untuk menggabungkan beberapa file PDF menjadi satu file PDF.") #e-WeYe
 
 
 uploaded_files = st.file_uploader("Unggah file PDF", accept_multiple_files=True)
