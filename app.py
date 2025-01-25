@@ -20,7 +20,7 @@ with kanan:
 st.write("Tools untuk menggabungkan beberapa file PDF menjadi satu file PDF.") #e-WeYe
 
 
-uploaded_files = st.file_uploader("Unggah file PDF", accept_multiple_files=True)
+uploaded_files = st.file_uploader("Unggah file PDF minimal 2 file", accept_multiple_files=True)
 
 if uploaded_files:
     if st.button("Gabungkan PDF"):
