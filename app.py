@@ -10,7 +10,7 @@ kanan, kiri = st.columns([4, 1])
 with kiri:
 
     logo = Image.open("logokpd.png")
-    st.image(logo, width=36)
+    st.image(logo, width=36, align="righ")  
     # st.write("KPD", align="right")
 
 with kanan:
