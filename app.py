@@ -5,7 +5,7 @@ import streamlit as st
 from PIL import Image
 
 logo = Image.open("logokpd.png")
-st.image(logo, width=100)
+st.image(logo, width=36)
 st.write("KPD", align="right")
 st.title("Tools Penggabung File PDF")
 st.write("Tools untuk menggabungkan beberapa file PDF menjadi satu file PDF.") #e-WeYe
