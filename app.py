@@ -29,15 +29,19 @@ def show_footer():
     with kaki_kanan:
         st.write("")
 
-kanan, kiri = st.columns([9, 1])
+# ---- MAIN PAGE ----
 
-with kiri:
+st.image("bismillah.png", width=360)
+
+kiri, kanan = st.columns([9, 1])
+
+with kanan:
 
     logo = Image.open("logokpd.png")
     st.image(logo, width=27)
     # st.write("KPD", align="right")
 
-with kanan:
+with kiri:
 
     st.title("Tools Penggabung File PDF")
 
@@ -77,7 +81,7 @@ if uploaded_files:
             else:
                 st.warning("Harap masukkan nama file keluaran.")
 
-    show_footer()
+show_footer()
 
 
 # ---- HIDE STREAMLIT STYLE ----
