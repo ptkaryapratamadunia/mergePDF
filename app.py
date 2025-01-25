@@ -7,13 +7,13 @@ from PIL import Image
 
 kanan, kiri = st.columns([4, 1])
 
-with kanan:
+with kiri:
 
     logo = Image.open("logokpd.png")
     st.image(logo, width=36)
     st.write("KPD", align="right")
 
-with kiri:
+with kanan:
     st.title("Tools Penggabung File PDF")
     st.write("Tools untuk menggabungkan beberapa file PDF menjadi satu file PDF.") #e-WeYe
 
