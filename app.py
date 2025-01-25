@@ -2,7 +2,12 @@
 import os
 from PyPDF2 import PdfMerger
 import streamlit as st
+from PIL import Image
 
+logo = Image.open("logokpd.png")
+st.image(logo, width=100)
+st.write("KPD", align="right")
+st.image(logo, width=100)
 st.title("Tools Penggabung File PDF")
 st.write("Tools untuk menggabungkan beberapa file PDF menjadi satu file PDF.") #e-WeYe
 
