@@ -21,8 +21,7 @@ def show_footer():
     with kaki_tengah:
     
         logo = Image.open("eweye.png")
-        st.image(logo, use_container_width=True) 
-        st.write("© 2025 e-WeYe. All rights reserved.")
+        st.image(logo, width=36) 
 
     with kaki_kanan2:
         st.write("")
@@ -30,6 +29,8 @@ def show_footer():
     with kaki_kanan:
         st.write("")
 
+    st.write("© 2025 e-WeYe. All rights reserved.")
+    
 # ---- MAIN PAGE ----
 
 header_L, header_R = st.columns([1, 4])
