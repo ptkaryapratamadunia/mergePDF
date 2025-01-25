@@ -4,6 +4,7 @@ from PyPDF2 import PdfMerger
 import streamlit as st
 from PIL import Image
 
+
 def show_footer():	
     #Footer diisi foto ditaruh ditengah
     st.markdown("---")
@@ -31,7 +32,13 @@ def show_footer():
 
 # ---- MAIN PAGE ----
 
-st.image("bismillah.png", width=360)
+header_L, header_R = st.columns([1, 4])
+
+with header_L:
+    st.write("")
+
+with header_R:
+    st.image("bismillah.png", width=360)
 
 kiri, kanan = st.columns([9, 1])
 
@@ -81,7 +88,7 @@ if uploaded_files:
             else:
                 st.warning("Harap masukkan nama file keluaran.")
 
-show_footer()
+    show_footer()
 
 
 # ---- HIDE STREAMLIT STYLE ----
