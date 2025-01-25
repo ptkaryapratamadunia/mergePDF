@@ -11,7 +11,7 @@ with kiri:
 
     logo = Image.open("logokpd.png")
     st.image(logo, width=36)
-    st.write("KPD", align="right")
+    # st.write("KPD", align="right")
 
 with kanan:
     st.title("Tools Penggabung File PDF")
