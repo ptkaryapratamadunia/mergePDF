@@ -10,7 +10,7 @@ def show_footer():
     st.markdown("---")
 
 
-    kaki_kiri,kaki_kiri2, kaki_tengah,kaki_kanan2, kaki_kanan=st.columns((1,0.5,2,0.5,1))
+    kaki_kiri,kaki_kiri2, kaki_tengah,kaki_kanan2, kaki_kanan=st.columns((2,2,1,2,2))
 
     with kaki_kiri:
         st.write("")
@@ -29,8 +29,16 @@ def show_footer():
     with kaki_kanan:
         st.write("")
 
-    st.write("© 2025 e-WeYe. All rights reserved.")
-    
+    cr_1, cr_2, cr_3 = st.columns([2, 2, 2])
+    with cr_1:
+        st.write("")
+    with cr_2:
+        st.write("© 2025 e-WeYe All rights reserved",align="center")
+        # st.write("All rights reserved",align="center")
+    with cr_3:
+        st.write("")
+
+
 # ---- MAIN PAGE ----
 
 header_L, header_R = st.columns([1, 4])
