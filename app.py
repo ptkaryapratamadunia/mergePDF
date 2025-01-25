@@ -1,10 +1,10 @@
-#24Jan2025 untuk indra kerja biar mudah terus diupload si QCWeboard
+#24Jan2025 untuk indra kerja biar mudah terus diupload di QCWeboard
 import os
 from PyPDF2 import PdfMerger
 import streamlit as st
 
 st.title("Tools Penggabung File PDF")
-st.write("Dengan tools ini, Anda dapat menggabungkan beberapa file PDF menjadi satu file PDF.") #e-WeYe
+st.write("Tools untuk menggabungkan beberapa file PDF menjadi satu file PDF.") #e-WeYe
 
 uploaded_files = st.file_uploader("Unggah file PDF", accept_multiple_files=True)
 
@@ -35,3 +35,13 @@ if uploaded_files:
                     st.error(f"Terjadi kesalahan: {e}")
             else:
                 st.warning("Harap masukkan nama file keluaran.")
+
+# ---- HIDE STREAMLIT STYLE ----
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
