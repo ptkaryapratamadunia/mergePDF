@@ -4,13 +4,37 @@ from PyPDF2 import PdfMerger
 import streamlit as st
 from PIL import Image
 
+def show_footer():	
+    #Footer diisi foto ditaruh ditengah
+    st.markdown("---")
 
-kanan, kiri = st.columns([4, 1])
+
+    kaki_kiri,kaki_kiri2, kaki_tengah,kaki_kanan2, kaki_kanan=st.columns((1,0.5,2,0.5,1))
+
+    with kaki_kiri:
+        st.write("")
+
+    with kaki_kiri2:
+        st.write("")
+
+    with kaki_tengah:
+    
+        logo = Image.open("eweye.png")
+        st.image(logo, use_column_width='always') 
+        st.write("© 2025 e-WeYe. All rights reserved.")
+
+    with kaki_kanan2:
+        st.write("")
+
+    with kaki_kanan:
+        st.write("")
+
+kanan, kiri = st.columns([9, 1])
 
 with kiri:
 
     logo = Image.open("logokpd.png")
-    st.image(logo, width=36, align="righ")  
+    st.image(logo, width=27)
     # st.write("KPD", align="right")
 
 with kanan:
@@ -36,7 +60,6 @@ if uploaded_files:
                 try:
                     merger.write(output_filename)
                     st.success(f"File PDF berhasil digabungkan dan disimpan sebagai {output_filename}")
-
                     with open(output_filename, "rb") as f:
                         st.download_button(
                             label="Download File Gabungan",
@@ -47,8 +70,15 @@ if uploaded_files:
                     os.remove(output_filename) #menghapus file setelah didownload
                 except Exception as e:
                     st.error(f"Terjadi kesalahan: {e}")
+
+                show_footer()
+
+
             else:
                 st.warning("Harap masukkan nama file keluaran.")
+
+    show_footer()
+
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
